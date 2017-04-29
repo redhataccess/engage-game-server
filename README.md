@@ -7,7 +7,7 @@ Server for the summit 2017 Engage Game
 
 ## Run
 
-    SMPT_PASS=<secret> npm start
+    SMTP_PASS=<secret> npm start
 
 Starts the server.  Replace <secret> with your smtp password.
 
