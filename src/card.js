@@ -7,31 +7,39 @@ const NAME = {
     X: 110,
     Y: 690,
     SIZE: 120,
-    FONT: "fonts/overpass-extrabold-italic.otf"
+    FONT: path.join(__dirname, "fonts/overpass-extrabold-italic.otf")
 };
-const SCORE = { X: 310, Y: 900, SIZE: 150, FONT: "fonts/overpass-bold.otf" };
+const SCORE = { X: 310, Y: 900, SIZE: 150, FONT: path.join(__dirname, "fonts/overpass-bold.otf") };
 
-const OUT_DIR = "./annotated-cards";
+const OUT_DIR = path.join(__dirname, "./annotated-cards");
 
-const BLANK_CARD = "./card.png";
+const BLANK_CARD = path.join(__dirname, "./card.png");
 
 // turn a string into a safe filename
 const safename = str => filenamify(str, { replacement: '_' });
 
-function annotate({ name, score }) {
+function annotate({ name, score, accountID }) {
     // gm docs: https://www.npmjs.com/package/gm
-    const outFile = path.join(__dirname, OUT_DIR, `${safename(name)}.png`);
-    gm(BLANK_CARD)
-        // annotate score
-        .font(SCORE.FONT, SCORE.SIZE)
-        .drawText(SCORE.X, SCORE.Y, score)
-        // annotate name
-        .font(NAME.FONT, NAME.SIZE)
-        .drawText(NAME.X, NAME.Y, name)
-        .write(outFile, err => console.error(err));
+    return new Promise(resolve => {
+        const outFile = path.join(OUT_DIR, `${safename(name)}.png`);
+        gm(BLANK_CARD)
+            .font(SCORE.FONT, SCORE.SIZE)
+            .drawText(SCORE.X, SCORE.Y, score) // annotate score
+            .font(NAME.FONT, NAME.SIZE)
+            .drawText(NAME.X, NAME.Y, name) // annotate name
+            .write(outFile, err => {
+                if (err) {
+                    console.error(err);
+                    reject(err);
+                }
+                else {
+                    resolve(outFile);
+                }
+            });
+    });
 }
 
-module.export = { annotate };
+module.exports = { annotate };
 
 // test code, enabling this file to be executed directly with `node card.js`
 if (require.main === module) {

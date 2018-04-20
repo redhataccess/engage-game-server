@@ -1,5 +1,6 @@
 const Hapi = require('hapi');
 const nodemailer = require('nodemailer');
+const card = require('./card.js');
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
@@ -11,8 +12,7 @@ let transporter = nodemailer.createTransport({
 });
 
 // Create a server with a host and port
-const server = new Hapi.Server();
-server.connection({
+const server = new Hapi.server({
     host: 'localhost',
     port: process.env.PORT || 8000,
     routes: { cors: true }
@@ -31,10 +31,15 @@ server.route([
         method: 'POST',
         path: '/sendMessage',
         handler: postHandler,
+    },
+    {
+        method: 'POST',
+        path: '/playerScore',
+        handler: playerScoreHandler,
     }
 ]);
 
-function postHandler (request, reply) {
+function postHandler(request, reply) {
     let from = '"Engage Game" <jared@scripta.co>';
 
     console.log("--------- Sending message ---------");
@@ -59,13 +64,37 @@ function postHandler (request, reply) {
         console.log('Message %s sent: %s', info.messageId, info.response);
     });
 
-    return reply('Sending Message');
+    return 'Sending Message';
+}
+
+function playerScoreHandler(request, reply) {
+    console.log(request.query);
+
+    const card = getCardImage(request.query);
+
+    printCard(card);
+
+    return 'thanks!';
+}
+
+async function getCardImage(bcardData) {
+    await card.annotate({ name: "Jared Sprague", score: 8675309 });
+}
+
+function printCard(card) {
+    console.log(`printing ${card}`);
 }
 
 // Start the server
-server.start((err) => {
-    if (err) {
-        throw err;
-    }
-    console.log('Server running at:', server.info.uri);
+
+const init = async () => {
+    await server.start();
+    console.log(`Server running at: ${server.info.uri}`);
+};
+
+process.on('unhandledRejection', (err) => {
+    console.log(err);
+    process.exit(1);
 });
+
+init();
