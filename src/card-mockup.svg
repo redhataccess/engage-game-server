@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="4in"
+   height="6in"
+   viewBox="0 0 101.6 152.4"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="card-mockup.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="243.30995"
+     inkscape:cy="288.31869"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="in"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4504"
+       units="in"
+       spacingx="3.175"
+       spacingy="3.175" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-144.59998)">
+    <rect
+       style="fill:#818181;fill-opacity:1;stroke:none;stroke-width:0.306;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="rect4524"
+       width="41.275002"
+       height="25.4"
+       x="53.974995"
+       y="265.24997" />
+    <rect
+       style="fill:#818181;fill-opacity:1;stroke:none;stroke-width:0.306;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="rect4526"
+       width="41.275002"
+       height="25.4"
+       x="6.3499999"
+       y="265.24997" />
+    <rect
+       y="233.49998"
+       x="6.3499999"
+       height="25.4"
+       width="41.275002"
+       id="rect4528"
+       style="fill:#818181;fill-opacity:1;stroke:none;stroke-width:0.306;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
+    <rect
+       style="fill:#818181;fill-opacity:1;stroke:none;stroke-width:0.306;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="rect4530"
+       width="41.275002"
+       height="25.4"
+       x="53.974998"
+       y="233.49998" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.64872551px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.21621814;stroke-opacity:1"
+       x="8.7898579"
+       y="242.92119"
+       id="text4534"><tspan
+         sodipodi:role="line"
+         x="8.7898579"
+         y="242.92119"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.21621814;stroke-opacity:1"
+         id="tspan4536">Labs</tspan></text>
+    <text
+       id="text4550"
+       y="242.92244"
+       x="56.423714"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.5445509px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.21361375;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4548"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.21361375;stroke-opacity:1"
+         y="242.92244"
+         x="56.423714"
+         sodipodi:role="line">Docs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.20492077px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.20512302;stroke-opacity:1"
+       x="56.780777"
+       y="274.67651"
+       id="text4554"><tspan
+         sodipodi:role="line"
+         x="56.780777"
+         y="274.67651"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.20512302;stroke-opacity:1"
+         id="tspan4552">Search</tspan></text>
+    <text
+       id="text4558"
+       y="274.67422"
+       x="9.0212631"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.39560986px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.20989023;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4556"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.20989023;stroke-opacity:1"
+         y="274.67422"
+         x="9.0212631"
+         sodipodi:role="line">Cases</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4572"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.08466655,147.47068)"><flowRegion
+         id="flowRegion4574"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"><rect
+           id="rect4576"
+           width="132"
+           height="36"
+           x="36"
+           y="384"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1" /></flowRegion><flowPara
+         id="flowPara4578"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1">Tools to help improve performance, optimize configuration, and troubleshoot.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4584"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.0000001px;line-height:1.25;font-family:'Nimbus Sans';-inkscape-font-specification:'Nimbus Sans';letter-spacing:0px;word-spacing:0px"
+       transform="matrix(0.26458333,0,0,0.26458333,0,144.59998)"><flowRegion
+         id="flowRegion4586"
+         style="-inkscape-font-specification:'Nimbus Sans';font-family:'Nimbus Sans';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><rect
+           id="rect4588"
+           width="132"
+           height="24"
+           x="216"
+           y="396"
+           style="-inkscape-font-specification:'Nimbus Sans';font-family:'Nimbus Sans';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" /></flowRegion><flowPara
+         id="flowPara4590" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4592"
+       style="font-family:monospace;font-size:18.66666667px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:monospace;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion4594"><rect
+           id="rect4596"
+           width="132"
+           height="24"
+           x="216"
+           y="396" /></flowRegion><flowPara
+         id="flowPara4598" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4600"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.04444928,144.27028)"><flowRegion
+         id="flowRegion4602"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"><rect
+           id="rect4604"
+           width="132"
+           height="24"
+           x="216"
+           y="396"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1" /></flowRegion><flowPara
+         id="flowPara4606"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1">Comprehensive guidance and content for Red Hat products.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4608"
+       style="font-family:monospace;font-size:18.66666667px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:monospace;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion4610"><rect
+           id="rect4612"
+           width="132"
+           height="24"
+           x="36"
+           y="516" /></flowRegion><flowPara
+         id="flowPara4614" /></flowRoot>    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,-0.08466655,179.22068)"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"
+       id="flowRoot4622"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4618"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"><rect
+           y="384"
+           x="36"
+           height="36"
+           width="132"
+           id="rect4616"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="flowPara4620">Real-time case status from Red Hat specialized technical support.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4630"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,47.540333,179.22068)"><flowRegion
+         id="flowRegion4626"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"><rect
+           id="rect4624"
+           width="132"
+           height="36"
+           x="36"
+           y="384"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1" /></flowRegion><flowPara
+         id="flowPara4628"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1">Enhanced search interface with improved functionality and new filters.</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       x="9.5249996"
+       y="279.00833"
+       id="text4634"><tspan
+         sodipodi:role="line"
+         id="tspan4632"
+         x="9.5249996"
+         y="279.00833"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"
+   id="tspan4652">access.redhat.com</tspan>/support/cases</tspan></text>
+    <text
+       id="text4638"
+       y="279.00833"
+       x="57.058361"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         y="279.00833"
+         x="57.058361"
+         id="tspan4636"
+         sodipodi:role="line"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"
+   id="tspan4656">access.redhat.com</tspan>/search</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       x="57.058361"
+       y="246.96478"
+       id="text4642"><tspan
+         sodipodi:role="line"
+         id="tspan4640"
+         x="57.058361"
+         y="246.96478"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"
+   id="tspan4654">access.redhat.com</tspan>/documentation</tspan></text>
+    <text
+       id="text4646"
+       y="246.96478"
+       x="9.4333601"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         y="246.96478"
+         x="9.4333601"
+         id="tspan4644"
+         sodipodi:role="line"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#fefefe;fill-opacity:1;stroke:none;stroke-opacity:1"
+   id="tspan4648">access.redhat.com</tspan>/labs</tspan></text>
+    <g
+       id="g4708">
+      <rect
+         y="157.29997"
+         x="6.3499999"
+         height="19.049999"
+         width="88.900002"
+         id="rect4512"
+         style="fill:#818181;fill-opacity:1;stroke:none;stroke-width:0.30599999;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
+      <image
+         width="70.58448"
+         height="13.759883"
+         preserveAspectRatio="none"
+         style="image-rendering:optimizeSpeed"
+         xlink:href="data:image/png;base64,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 "
+         id="image4670"
+         x="15.875"
+         y="159.94504" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.14809132px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#818181;fill-opacity:1;stroke-width:0.22221917"
+       x="27.834791"
+       y="154.02957"
+       id="text4679"><tspan
+         sodipodi:role="line"
+         id="tspan4677"
+         x="27.834791"
+         y="154.02957"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Heavy';fill:#818181;fill-opacity:1;stroke-width:0.22221917">THANKS FOR PLAYING</tspan></text>
+    <text
+       id="text4683"
+       y="185.7794"
+       x="23.856758"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.15576029px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#818181;fill-opacity:1;stroke-width:0.22263002"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Heavy';fill:#818181;fill-opacity:1;stroke-width:0.22263002"
+         y="185.7794"
+         x="23.856758"
+         id="tspan4681"
+         sodipodi:role="line">AT RED HAT SUMMIT 2018</tspan></text>
+    <rect
+       style="fill:#818181;fill-opacity:1;stroke:none;stroke-width:0.27933851;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="rect4514"
+       width="63.5"
+       height="15.875"
+       x="6.3500004"
+       y="192.22498" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4691"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.33333397px;line-height:1.25;font-family:'Overpass Mono';-inkscape-font-specification:'Overpass Mono Bold';letter-spacing:0px;word-spacing:0px;fill:#f8f8f8;fill-opacity:1;"
+       transform="matrix(0.44419289,0,0,0.44419289,-28.332822,109.38825)"><flowRegion
+         id="flowRegion4693"
+         style="fill:#f8f8f8;fill-opacity:1;-inkscape-font-specification:'Overpass Mono Bold';font-family:'Overpass Mono';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;"><rect
+           id="rect4695"
+           width="216"
+           height="48"
+           x="84"
+           y="192"
+           style="fill:#f8f8f8;fill-opacity:1;-inkscape-font-specification:'Overpass Mono Bold';font-family:'Overpass Mono';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;" /></flowRegion><flowPara
+         id="flowPara4697"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Overpass Mono';-inkscape-font-specification:'Overpass Mono Bold';fill:#f8f8f8;fill-opacity:1;">$YOUR_NAME</flowPara></flowRoot>    <text
+       id="text4712"
+       y="223.2162"
+       x="26.332518"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.76954842px;line-height:1.25;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';letter-spacing:0px;word-spacing:0px;fill:#818181;fill-opacity:1;stroke-width:0.89836866;"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:'Overpass Bold';fill:#818181;fill-opacity:1;stroke-width:0.89836866;"
+         y="223.2162"
+         x="26.332518"
+         id="tspan4710"
+         sodipodi:role="line">8,675,309</tspan></text>
+    <rect
+       y="204.92497"
+       x="22.225"
+       height="22.225002"
+       width="73.025009"
+       id="rect4714"
+       style="fill:none;fill-opacity:1;stroke:#818181;stroke-width:0.354;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
+  </g>
+</svg>
