@@ -77,9 +77,13 @@ function postHandler(request, reply) {
 }
 
 async function playerScoreHandler(request, reply) {
-    console.log(request.query);
+    console.log("Player score received:", request.payload);
 
-    const cardFiles = await card.annotate({ name: "Jared Sprague", score: 8675309 });
+    const cardFiles = await card.annotate({
+        name: request.payload.Firstname || "NONAME",
+        score: request.payload.score || "NOSCORE",
+        accountID: request.payload.AccountId || "NOID"
+    });
 
     let cardToPrint;
 
