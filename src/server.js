@@ -1,6 +1,8 @@
 const Hapi = require('hapi');
 const nodemailer = require('nodemailer');
 const card = require('./card.js');
+const { exec } = require('child_process');
+
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
@@ -79,6 +81,20 @@ async function playerScoreHandler(request, reply) {
 
 function printCard(card) {
     console.log(`printing ${card}`);
+
+    const command = `lpr "${card}"`;
+
+    console.log("Executing print command:", command);
+
+    exec(command, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`printing error: ${error}`);
+            console.log(`stdout: ${stdout}`);
+            console.log(`stderr: ${stderr}`);
+            return;
+        }
+        console.log('lpr command executed successfully');
+    });
 }
 
 // Start the server

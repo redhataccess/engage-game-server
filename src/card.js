@@ -23,8 +23,12 @@ const SCORE = {
 };
 
 const OUT_DIR = path.join(__dirname, "./annotated-cards");
-
 const BLANK_CARD = path.join(__dirname, "./card.png");
+
+// Create the card output directory if it doesnt already exist
+if (!fs.existsSync(OUT_DIR)){
+    fs.mkdirSync(OUT_DIR);
+}
 
 // turn a string into a safe filename
 // const safename = str => asciifold.fold(str, "");
