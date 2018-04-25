@@ -67,18 +67,18 @@ function postHandler(request, reply) {
     return 'Sending Message';
 }
 
-function playerScoreHandler(request, reply) {
+async function playerScoreHandler(request, reply) {
     console.log(request.query);
 
-    const card = getCardImage(request.query);
+    const cardFile = await getCardImage(request.query);
 
-    printCard(card);
+    printCard(cardFile);
 
-    return 'thanks!';
+    return { message: `printing ${cardFile}` };
 }
 
 async function getCardImage(bcardData) {
-    await card.annotate({ name: "Jared Sprague", score: 8675309 });
+    return await card.annotate({ name: "Jared Sprague", score: 8675309 });
 }
 
 function printCard(card) {
