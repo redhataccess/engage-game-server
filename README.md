@@ -4,6 +4,7 @@ Server for the summit 2017 Engage Game
 ## Setup
 
     npm install
+    dnf install GraphicsMagick ImageMagick
 
 ## Run
 
