@@ -3,6 +3,13 @@ const nodemailer = require('nodemailer');
 const card = require('./card.js');
 const { exec } = require('child_process');
 
+const PRINT_TYPES = {
+    FULL_CARD: Symbol('fullcard'),
+    JUST_ANNOTATION: Symbol('just-annotation')
+};
+
+const PRINT_TYPE = PRINT_TYPES.JUST_ANNOTATION;
+const DO_PRINT = false;
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
@@ -72,29 +79,41 @@ function postHandler(request, reply) {
 async function playerScoreHandler(request, reply) {
     console.log(request.query);
 
-    const cardFile = await card.annotate({ name: "Jared Sprague", score: 8675309 });
+    const cardFiles = await card.annotate({ name: "Jared Sprague", score: 8675309 });
 
-    printCard(cardFile);
+    let cardToPrint;
 
-    return { message: `printing ${cardFile}` };
+    // decide here whether to print just the annotation or the full card
+    if (PRINT_TYPE === PRINT_TYPES.FULL_CARD) {
+        cardToPrint = cardFiles.fullCard;
+    }
+    else if (PRINT_TYPE === PRINT_TYPES.JUST_ANNOTATION) {
+        cardToPrint = cardFiles.annotationOnly;
+    }
+
+    printCard(cardToPrint);
+
+    return { message: `printing .${cardToPrint.replace(__dirname, '')}` };
 }
 
 function printCard(card) {
     console.log(`printing ${card}`);
 
-    const command = `lpr "${card}"`;
+    const command = `lpr -o media=Custom.5x7in "${card}"`;
 
     console.log("Executing print command:", command);
 
-    exec(command, (error, stdout, stderr) => {
-        if (error) {
-            console.error(`printing error: ${error}`);
-            console.log(`stdout: ${stdout}`);
-            console.log(`stderr: ${stderr}`);
-            return;
-        }
-        console.log('lpr command executed successfully');
-    });
+    if (DO_PRINT) {
+        exec(command, (error, stdout, stderr) => {
+            if (error) {
+                console.error(`printing error: ${error}`);
+                console.log(`stdout: ${stdout}`);
+                console.log(`stderr: ${stderr}`);
+                return;
+            }
+            console.log('lpr command executed successfully');
+        });
+    }
 }
 
 // Start the server

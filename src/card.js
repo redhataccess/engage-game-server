@@ -4,13 +4,13 @@ const gm = require("gm");
 const filenamify = require("filenamify");
 
 const NAME = {
-  Y: 740,
-  SIZE: 84,
+  Y: 1720,
+  SIZE: 220,
   COLOR: "#004b73",
   FONT: path.join(__dirname, "fonts/overpass-extrabold.otf")
 };
 const WORD_SCORE = {
-  Y: NAME.Y + 53,
+  Y: NAME.Y + NAME.SIZE / 1.9,
   SIZE: NAME.SIZE / 2.72,
   COLOR:NAME.COLOR,
   FONT: path.join(__dirname, "fonts/overpass-regular.otf")
@@ -23,24 +23,39 @@ const SCORE = {
 };
 
 const OUT_DIR = path.join(__dirname, "./annotated-cards");
-const BLANK_CARD = path.join(__dirname, "./card.png");
+const OUT_DIR_FULL_CARDS = path.join(OUT_DIR, "./full-cards");
+const OUT_DIR_ANNOTATIONS = path.join(OUT_DIR, "./just-annotations");
+const CARD_TEMPLATE = path.join(__dirname, "./source-cards/card-template.png");
+const CARD_TEMPLATE_BLANK = path.join(__dirname, "./source-cards/card-template-blank.png");
 
 // Create the card output directory if it doesnt already exist
-if (!fs.existsSync(OUT_DIR)){
-    fs.mkdirSync(OUT_DIR);
+function mkdirIfMissing(dir) {
+    if (!fs.existsSync(dir)){
+        fs.mkdirSync(dir);
+    }
 }
+mkdirIfMissing(OUT_DIR);
+mkdirIfMissing(OUT_DIR_FULL_CARDS);
+mkdirIfMissing(OUT_DIR_ANNOTATIONS);
 
 // turn a string into a safe filename
 // const safename = str => asciifold.fold(str, "");
 const safename = str => filenamify(str, { replacement: '_' });;
 
-function annotate({ name, score, accountID }) {
+async function annotate({ name, score, accountID }) {
   // gm docs: https://www.npmjs.com/package/gm
-  return new Promise(resolve => {
+    const fullCard = await annotateImage({ name, score, accountID, template: CARD_TEMPLATE, outDir: OUT_DIR_FULL_CARDS });
+    const annotationOnly = await annotateImage({ name, score, accountID, template: CARD_TEMPLATE_BLANK, outDir: OUT_DIR_ANNOTATIONS });
+
+    return { fullCard, annotationOnly };
+}
+
+function annotateImage({ name, score, accountID, template, outDir }) {
+  return new Promise((resolve, reject) => {
     const asciiName = safename(name);
-    const outFile = path.join(OUT_DIR, `${asciiName}.png`);
+    const outFile = path.join(outDir, `${asciiName}.png`);
     const scoreString = Intl.NumberFormat('en-US').format(score);
-    gm(BLANK_CARD)
+    gm(template)
       .gravity("North") // center text
       .strokeWidth('0px')
 
@@ -76,9 +91,9 @@ module.exports = { annotate };
 // test code, enabling this file to be executed directly with `node card.js`
 if (require.main === module) {
   annotate({ name: "Shadowman", score: Math.floor(Math.random()*8675309) });
-  annotate({ name: "Howlongmustafirstnamebe", score: Math.floor(Math.random()*8675309) });
+  // annotate({ name: "Howlongmustafirstnamebe", score: Math.floor(Math.random()*8675309) });
   annotate({ name: "Lauren", score: Math.floor(Math.random()*8675309) });
   annotate({ name: "Jared", score: Math.floor(Math.random()*8675309) });
-  annotate({ name: "Aĺĺÿşôň", score: Math.floor(Math.random()*8675309) });
-  annotate({ name: "S̰̣̗̲̭̱H̟͙̞̦̥̼A̲̞̠͇͠Ḑ̦̻O̤̝̦̭̗͙͝W̸͓̭̦̟̟̝M͏͉̻̪̞̠̺̖A̖̥̫̯̼̠̹N̶", score: Math.floor(Math.random()*8675309) }); // put the typeface to the test with crazy unicode symbols
+  // annotate({ name: "Aĺĺÿşôň", score: Math.floor(Math.random()*8675309) });
+  // annotate({ name: "S̰̣̗̲̭̱H̟͙̞̦̥̼A̲̞̠͇͠Ḑ̦̻O̤̝̦̭̗͙͝W̸͓̭̦̟̟̝M͏͉̻̪̞̠̺̖A̖̥̫̯̼̠̹N̶", score: Math.floor(Math.random()*8675309) }); // put the typeface to the test with crazy unicode symbols
 }
