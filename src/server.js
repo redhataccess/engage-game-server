@@ -10,7 +10,7 @@ const PRINT_TYPES = {
 };
 
 const PRINT_TYPE = PRINT_TYPES.JUST_ANNOTATION;
-const DO_PRINT = false;
+const DO_PRINT = true;
 
 const PARSE_URL = 'http://localhost:1337';
 
@@ -83,8 +83,16 @@ async function playerScoreHandler(request, reply) {
     console.log("Player score received:", player);
 
 
+    let playerName = player.Firstname;
+    if (playerName === 'Lexy') {
+        playerName = 'Thanks Tyler!'
+    }
+    else if (playerName === 'Mercedes') {
+        playerName = 'Thanks Krystal!'
+    }
+
     const cardFiles = await card.annotate({
-        name: player.Firstname || "NONAME",
+        name: playerName || "NONAME",
         score: player.score || "NOSCORE",
         accountID: player.AccountId || "NOID"
     });
