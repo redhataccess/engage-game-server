@@ -11,6 +11,8 @@ const PRINT_TYPES = {
 const PRINT_TYPE = PRINT_TYPES.JUST_ANNOTATION;
 const DO_PRINT = false;
 
+const PARSE_URL = 'http://localhost:1337';
+
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -76,12 +78,14 @@ function postHandler(request, reply) {
 }
 
 async function playerScoreHandler(request, reply) {
-    console.log("Player score received:", request.payload);
+    let player = request.payload;
+    console.log("Player score received:", player);
+
 
     const cardFiles = await card.annotate({
-        name: request.payload.Firstname || "NONAME",
-        score: request.payload.score || "NOSCORE",
-        accountID: request.payload.AccountId || "NOID"
+        name: player.Firstname || "NONAME",
+        score: player.score || "NOSCORE",
+        accountID: player.AccountId || "NOID"
     });
 
     let cardToPrint;
@@ -95,7 +99,7 @@ async function playerScoreHandler(request, reply) {
     }
 
     printCard(cardToPrint);
-    recordScore(request.payload);
+    saveScore(player.AccountId, player.Firstname, player.Email, player.score);
 
     return { message: `printing .${cardToPrint.replace(__dirname, '')}` };
 }
@@ -120,9 +124,36 @@ function printCard(card) {
     }
 }
 
-function recordScore(player) {
-    // send the player data and their score to the parse server
-    //TODO: Implement
+
+function saveScore(AccountId, name, email, score) {
+    console.log('Saving score to parse');
+
+    // remove < characters to prevent any chance of xss attack
+    name = name.replace(/</g , "");
+    email = email.replace(/</g , "");
+
+    // also make max length for names and emails
+    name = name.substr(0, 50);
+    email = email.substr(0, 50);
+
+    return fetch(
+        PARSE_URL + '/parse/classes/leaders',
+        {
+            method: 'POST',
+            headers: {
+                'X-Parse-Application-Id': 'ENGAGE',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({AccountId, name, score, email }),
+        }
+    ).then(response => {
+        response.json();
+        console.log("Score save status: ", response.status);
+
+        if (response.status === 200) {
+            console.log('Score saved');
+        }
+    });
 }
 
 // Start the server
