@@ -22,7 +22,6 @@ let transporter = nodemailer.createTransport({
 
 // Create a server with a host and port
 const server = new Hapi.server({
-    host: 'localhost',
     port: process.env.PORT || 8000,
     routes: { cors: true }
 });
@@ -96,6 +95,7 @@ async function playerScoreHandler(request, reply) {
     }
 
     printCard(cardToPrint);
+    recordScore(request.payload);
 
     return { message: `printing .${cardToPrint.replace(__dirname, '')}` };
 }
@@ -118,6 +118,11 @@ function printCard(card) {
             console.log('lpr command executed successfully');
         });
     }
+}
+
+function recordScore(player) {
+    // send the player data and their score to the parse server
+    //TODO: Implement
 }
 
 // Start the server
