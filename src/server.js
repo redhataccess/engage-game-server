@@ -2,6 +2,7 @@ const Hapi = require('hapi');
 const nodemailer = require('nodemailer');
 const card = require('./card.js');
 const { exec } = require('child_process');
+const fetch = require('node-fetch');
 
 const PRINT_TYPES = {
     FULL_CARD: Symbol('fullcard'),
