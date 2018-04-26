@@ -151,7 +151,7 @@ function saveScore(AccountId, name, email, score) {
         response.json();
         console.log("Score save status: ", response.status);
 
-        if (response.status === 200) {
+        if (response.ok) {
             console.log('Score saved');
         }
     });
