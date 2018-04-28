@@ -47,6 +47,11 @@ server.route([
         method: 'POST',
         path: '/playerScore',
         handler: playerScoreHandler,
+    },
+    {
+        method: 'POST',
+        path: '/logPlay',
+        handler: logPlayHandler,
     }
 ]);
 
@@ -111,6 +116,35 @@ async function playerScoreHandler(request, reply) {
     saveScore(player.AccountId, player.Firstname, player.Email, player.score);
 
     return { message: `printing .${cardToPrint.replace(__dirname, '')}` };
+}
+
+function logPlayHandler(request, reply) {
+    let playLog = {
+        datetime: new Date().toString(),
+        msg: 'play started'
+    };
+
+    // log that the game was played at this time
+    return fetch(
+        PARSE_URL + '/parse/classes/plays',
+        {
+            method: 'POST',
+            headers: {
+                'X-Parse-Application-Id': 'ENGAGE',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(playLog),
+        }
+    ).then(response => {
+        response.json();
+        console.log("log play status: ", response.status);
+
+        if (response.ok) {
+            let responseMessage = 'logged game play started at this time: ' + playLog.datetime;
+            console.log(responseMessage);
+            return responseMessage;
+        }
+    });
 }
 
 function printCard(card) {
