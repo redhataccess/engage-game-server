@@ -10,7 +10,7 @@ const PRINT_TYPES = {
 };
 
 const PRINT_TYPE = PRINT_TYPES.JUST_ANNOTATION;
-const DO_PRINT = true;
+const DO_PRINT = false;
 
 const PARSE_URL = 'http://localhost:1337';
 
