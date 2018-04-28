@@ -137,6 +137,9 @@ function printCard(card) {
 function saveScore(AccountId, name, email, score) {
     console.log('Saving score to parse');
 
+    // Make sure AccountId is a number
+    AccountId = +AccountId;
+
     // remove < characters to prevent any chance of xss attack
     name = name.replace(/</g , "");
     email = email.replace(/</g , "");
@@ -153,7 +156,7 @@ function saveScore(AccountId, name, email, score) {
                 'X-Parse-Application-Id': 'ENGAGE',
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({AccountId, name, score, email }),
+            body: JSON.stringify({ AccountId, name, score, email }),
         }
     ).then(response => {
         response.json();
