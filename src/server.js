@@ -52,6 +52,11 @@ server.route([
         method: 'POST',
         path: '/logPlay',
         handler: logPlayHandler,
+    },
+    {
+        method: 'POST',
+        path: '/logBadge',
+        handler: logBadgeHandler,
     }
 ]);
 
@@ -140,7 +145,31 @@ function logPlayHandler(request, reply) {
         console.log("log play status: ", response.status);
 
         if (response.ok) {
-            let responseMessage = 'logged game play started at this time: ' + playLog.datetime;
+            let responseMessage = 'Logged game play started at this time: ' + playLog.datetime;
+            console.log(responseMessage);
+            return responseMessage;
+        }
+    });
+}
+
+function logBadgeHandler(request, reply) {
+    // log when a badge is scanned all the data from the badge
+    return fetch(
+        PARSE_URL + '/parse/classes/badges',
+        {
+            method: 'POST',
+            headers: {
+                'X-Parse-Application-Id': 'ENGAGE',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(request.payload),
+        }
+    ).then(response => {
+        response.json();
+        console.log("log badge status: ", response.status);
+
+        if (response.ok) {
+            let responseMessage = 'Logged badge data for AccountId: ' + request.payload.AccountId;
             console.log(responseMessage);
             return responseMessage;
         }
