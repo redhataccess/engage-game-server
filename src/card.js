@@ -58,8 +58,9 @@ function getAnnotationOutFilename(firstName, accountId) {
 
 function annotateImage({ name, score, accountID, template, outDir }) {
   return new Promise((resolve, reject) => {
-    const asciiName = safename(name + '_' + accountID);
-    const outFile = path.join(outDir, `${asciiName}.png`);
+    const asciiName = safename(name);
+    const nameAndId = safename(name + '_' + accountID);
+    const outFile = path.join(outDir, `${nameAndId}.png`);
     const scoreString = Intl.NumberFormat('en-US').format(score);
     gm(template)
       .gravity("North") // center text
