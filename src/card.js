@@ -40,7 +40,8 @@ mkdirIfMissing(OUT_DIR_ANNOTATIONS);
 
 // turn a string into a safe filename
 // const safename = str => asciifold.fold(str, "");
-const safename = str => filenamify(str, { replacement: '_' });;
+const safename = str => filenamify(str, { replacement: '_' });
+
 
 async function annotate({ name, score, accountID }) {
   // gm docs: https://www.npmjs.com/package/gm
@@ -50,9 +51,14 @@ async function annotate({ name, score, accountID }) {
     return { fullCard, annotationOnly };
 }
 
+function getAnnotationOutFilename(firstName, accountId) {
+    const asciiName = safename(firstName + '_' + accountId);
+    return path.join(OUT_DIR_ANNOTATIONS, `${asciiName}.png`);
+}
+
 function annotateImage({ name, score, accountID, template, outDir }) {
   return new Promise((resolve, reject) => {
-    const asciiName = safename(name);
+    const asciiName = safename(name + '_' + accountID);
     const outFile = path.join(outDir, `${asciiName}.png`);
     const scoreString = Intl.NumberFormat('en-US').format(score);
     gm(template)
@@ -86,7 +92,10 @@ function annotateImage({ name, score, accountID, template, outDir }) {
   });
 }
 
-module.exports = { annotate };
+module.exports = {
+    annotate: annotate,
+    getAnnotationOutFilename: getAnnotationOutFilename
+};
 
 // test code, enabling this file to be executed directly with `node card.js`
 if (require.main === module) {

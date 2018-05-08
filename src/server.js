@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 const card = require('./card.js');
 const { exec } = require('child_process');
 const fetch = require('node-fetch');
+const fs = require("fs");
 
 const PRINT_TYPES = {
     FULL_CARD: Symbol('fullcard'),
@@ -94,33 +95,39 @@ async function playerScoreHandler(request, reply) {
 
 
     let playerName = player.Firstname;
-    if (playerName === 'Lexy') {
-        playerName = 'Thanks Tyler!'
+    let message;
+
+    // Only print card if it doesn't exist yet
+    let destCard = card.getAnnotationOutFilename(playerName, player.AccountId);
+    if (!fs.existsSync(destCard)){
+        const cardFiles = await card.annotate({
+            name: playerName || "NONAME",
+            score: player.score || "NOSCORE",
+            accountID: player.AccountId || "NOID"
+        });
+
+        let cardToPrint;
+
+        // decide here whether to print just the annotation or the full card
+        if (PRINT_TYPE === PRINT_TYPES.FULL_CARD) {
+            cardToPrint = cardFiles.fullCard;
+        }
+        else if (PRINT_TYPE === PRINT_TYPES.JUST_ANNOTATION) {
+            cardToPrint = cardFiles.annotationOnly;
+        }
+
+        printCard(cardToPrint);
+
+        message = `printing .${cardToPrint.replace(__dirname, '')}`;
     }
-    else if (playerName === 'Mercedes') {
-        playerName = 'Thanks Krystal!'
+    else {
+        message = 'Skipping printing because file exists already: ' + destCard;
+        console.log(message);
     }
 
-    const cardFiles = await card.annotate({
-        name: playerName || "NONAME",
-        score: player.score || "NOSCORE",
-        accountID: player.AccountId || "NOID"
-    });
-
-    let cardToPrint;
-
-    // decide here whether to print just the annotation or the full card
-    if (PRINT_TYPE === PRINT_TYPES.FULL_CARD) {
-        cardToPrint = cardFiles.fullCard;
-    }
-    else if (PRINT_TYPE === PRINT_TYPES.JUST_ANNOTATION) {
-        cardToPrint = cardFiles.annotationOnly;
-    }
-
-    printCard(cardToPrint);
     saveScore(player.AccountId, player.Firstname, player.Email, player.score);
 
-    return { message: `printing .${cardToPrint.replace(__dirname, '')}` };
+    return { message: message };
 }
 
 function logPlayHandler(request, reply) {
